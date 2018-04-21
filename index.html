@@ -1,0 +1,43 @@
+<style>
+.accordion {
+  background: hsla(0, 100%, 95%, 1);
+  border: 1px solid hsla(0, 100%, 79%, 1);
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+.accordion::before {
+  content: 'I am accordion!';
+  background: hsla(0, 100%, 79%, 1);
+  display: block;
+}
+.accordion--hidden {
+  height: 1em;
+}
+</style>
+<div class="accordion">
+  <ol>
+    <li>stuff</li>
+    <li>that</li>
+    <li>should</li>
+    <li>be</li>
+    <li>hidden</li>
+    <li>on click</li>
+  </ol>
+</div>
+
+<div class="accordion accordion--hidden">
+  <ol>
+    <li>this</li>
+    <li>one</li>
+    <li>is</li>
+    <li>hidden</li>
+    <li>by</li>
+    <li>default</li>
+  </ol>
+</div>
+
+<script type="module">
+import jQuery from "./jquery.js";
+import { init } from "./accordion.js";
+init(jQuery);
+</script>
